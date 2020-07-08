@@ -1,24 +1,139 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import logo from './assets/instalogo.svg';
+import Form from './components/form';
+import Section1 from './components/section1';
+import Section2 from './components/section2';
+import Section3 from './components/section3';
+import Section4 from './components/section4';
 
 function App() {
+
+  var TxtRotate = function(el, toRotate, period) {
+  this.toRotate = toRotate;
+  this.el = el;
+  this.loopNum = 0;
+  this.period = parseInt(period, 10) || 2000;
+  this.txt = '';
+  this.tick();
+  this.isDeleting = false;
+};
+
+TxtRotate.prototype.tick = function() {
+  var i = this.loopNum % this.toRotate.length;
+  var fullTxt = this.toRotate[i];
+
+  if (this.isDeleting) {
+    this.txt = fullTxt.substring(0, this.txt.length - 1);
+  } else {
+    this.txt = fullTxt.substring(0, this.txt.length + 1);
+  }
+
+  this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+
+  var that = this;
+  var delta = 300 - Math.random() * 100;
+
+  if (this.isDeleting) { delta /= 2; }
+
+  if (!this.isDeleting && this.txt === fullTxt) {
+    delta = this.period;
+    this.isDeleting = true;
+  } else if (this.isDeleting && this.txt === '') {
+    this.isDeleting = false;
+    this.loopNum++;
+    delta = 500;
+  }
+
+  setTimeout(function() {
+    that.tick();
+  }, delta);
+};
+
+window.onload = function() {
+  var elements = document.getElementsByClassName('txt-rotate');
+  for (var i=0; i<elements.length; i++) {
+    var toRotate = elements[i].getAttribute('data-rotate');
+    var period = elements[i].getAttribute('data-period');
+    if (toRotate) {
+      new TxtRotate(elements[i], JSON.parse(toRotate), period);
+    }
+  }
+  // INJECT CSS
+  var css = document.createElement("style");
+  css.type = "text/css";
+  css.innerHTML = ".txt-rotate > .wrap { border-right: 0.08em solid #666 }";
+  document.body.appendChild(css);
+};
+
+window.onscroll=()=>{
+  var nav = document.getElementById('topnav');
+  if(window.pageYOffset>60){
+   nav.classList.add("scrolledtop");
+}else{
+  nav.classList.remove("scrolledtop")
+}
+}
+
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <header className="full-width headerback">
+      <nav id="topnav" className="navbar navbar-expand-lg bg-topbar shadow">
+      <a className="navbar-brand text-white text-justify" href="#">
+       <img src={logo} width="140" height="60" className="d-inline-block align-top px-1" alt="" loading="lazy"/>
+       </a>
+  <button className="navbar-toggler text-white" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <i className="fas fa-list-alt menuleftbtn"></i>
+  </button>
+  <div className="collapse navbar-collapse w-100" id="navbarNav">
+    <ul className="navbar-nav list-nav">
+      <li className="nav-item active">
+        <a className="nav-link text-white txtfontstyle" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li className="nav-item">
+        <a className="nav-link text-white txtfontstyle" href="#">Features</a>
+      </li>
+      <li className="nav-item">
+        <a className="nav-link text-white txtfontstyle" href="#">Pricing</a>
+      </li>
+    </ul>
+  </div>
+    </nav>
+    <br/>
+    <div className="row second-sectionheader">
+    <div className="col-md-6 formplace">
+    <Form/>
+    </div>
+<div className="col-md-6 second-header-column">
+<h1 className="h1-header"><p className="txtcolorhead">You will </p> 
+  <span
+     class="txt-rotate"
+     data-period="2000"
+     data-rotate='[ " Get More Followers", " Start business", " Stop lose", " Win Instant service.", " Have a real business" ]'></span>
+</h1>
+<div className="w-100">
+<button className="btn btn-optionscolor"><h2 className="h2-header">Start Now !</h2></button>
+</div>
+    </div>
+    </div>
+    <br/><br/>
       </header>
+  <section className="firstsectionback">
+  <Section1/>
+  </section>
+  <br/>
+  <section className="secondsectionback">
+  <Section2/>
+  </section>
+  <br/>
+  <section className="thirdsectionback">
+  <Section3/>
+  </section>
+  
+  <section className="forthsectionback">
+  <Section4/>
+  </section>
     </div>
   );
 }

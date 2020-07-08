@@ -1,0 +1,23 @@
+.section4 {
+    width: 98%;
+}
+
+.pic {
+    margin: 2% 10% 0;
+    width: 300px;
+}
+
+.listfooter {
+    list-style: none;
+    margin-top: 10%;
+}
+
+.listfooter>li {
+    height: 30%;
+    width: 30%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    background-color: burlywood;
+}

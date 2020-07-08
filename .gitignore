@@ -7,7 +7,8 @@
 
 # testing
 /coverage
-
+/public/bootstrap-4.4.1-dist
+/public/fontawesome
 # production
 /build
 

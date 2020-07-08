@@ -1,0 +1,22 @@
+.section2 {
+    margin-bottom: 2%;
+    height: 40%;
+}
+
+.picprice {
+    height: 70%;
+    margin-top: 5%;
+}
+
+.colcenteritem {
+    text-align: center;
+    justify-content: center;
+}
+
+.btnbuynow {
+    margin-top: 2%;
+    width: 50%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: white;
+    font-size: xx-large;
+}

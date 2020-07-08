@@ -1,0 +1,23 @@
+.section1 {
+    margin-top: 2%;
+    margin-bottom: 2%;
+    height: 20%;
+}
+
+.div-col {
+    border-radius: 1em;
+    border: 3px solid rgb(226, 170, 66);
+    height: 100px;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    font-size: 3em;
+    margin-bottom: 4px;
+}
+
+.txtdesc {
+    font-size: x-large;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}

@@ -1,13 +1,124 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+.headerback {
+    background-image: url('./assets/staticinsta.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+}
+
+.menuleftbtn {
+    width: 60px;
+}
+
+.txtfontstyle {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: x-large;
+}
+
+.list-nav {
+    margin-left: 70%;
+}
+
+.bg-topbar {
+    background-color: rgba(255, 196, 196, 0.637);
+}
+
+.second-header-column {
+    background-image: url('./assets/phone.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 60%;
+    margin-left: 0%;
+    align-items: center;
+}
+
+.txtcolorhead {
+    color: rgb(211, 20, 20);
+    font-weight: bolder;
+}
+
+.second-header-column>div {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10%;
+}
+
+.formplace {
+    justify-content: center;
+    flex: content;
+    flex-wrap: wrap;
+}
+
+.second-sectionheader {
+    margin-top: 4%;
+    width: 99%;
+}
+
+.h1-header {
+    font-weight: 200;
+    margin: 0.4em 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.h1-header {
+    font-size: 3.5em;
+}
+
+.h2-header {
+    font-size: 2em;
+    color: white;
+}
+
+.secondsectionback,
+.firstsectionback {
+    margin-bottom: 3%;
+}
+
+.secondsectionback {
+    background-color: rgb(226, 170, 66);
+}
+
+.btn-optionscolor {
+    background-color: rgb(224, 107, 107);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: x-large;
+    color: white;
+}
+
+.scrolledtop {
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    background-color: rgb(226, 170, 66);
+}
+
+.thirdsectionback {
+    margin: 2% 0 2%;
+    height: 300px;
+    background-image: url('./assets/phonehandinsta.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.forthsectionback {
+    margin-top: 6%;
+    height: 45%;
+    width: 100%;
+    background-color: rgb(224, 107, 107);
+    ;
 }
