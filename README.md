@@ -1,3 +1,8 @@
+in Public/ 
+add Bootstrap directory downloded from bootstrap official site
++ Fontawasome from fontawesome website
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
