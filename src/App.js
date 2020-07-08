@@ -72,6 +72,28 @@ window.onscroll=()=>{
 }else{
   nav.classList.remove("scrolledtop")
 }
+var section2 = document.getElementById('section2');
+      if(window.pageYOffset>400)
+      {
+         section2.style.marginLeft="1px";
+      }else{
+        section2.style.marginLeft="-300px";
+      }
+
+      var social = document.getElementsByClassName('socialmedia');
+      if(window.pageYOffset>1200)
+      {
+         social[0].style.height="70px";
+         social[0].style.transition="3s";
+         social[1].style.transition="3s";
+         social[2].style.transition="3s";
+         social[1].style.height="70px";
+         social[2].style.height="70px";
+      }else{
+        social[0].style.height="40px";
+        social[1].style.height="40px";
+        social[2].style.height="40px";
+      }
 }
 
 
@@ -101,19 +123,19 @@ window.onscroll=()=>{
   </div>
     </nav>
     <br/>
-    <div className="row second-sectionheader">
+    <div className="row w-100 second-sectionheader">
     <div className="col-md-6 formplace">
     <Form/>
     </div>
 <div className="col-md-6 second-header-column">
-<h1 className="h1-header"><p className="txtcolorhead">You will </p> 
+<h1 className="h1-header"><p className="txtcolorhead">Welcome</p> 
   <span
      class="txt-rotate"
      data-period="2000"
-     data-rotate='[ " Get More Followers", " Start business", " Stop lose", " Win Instant service.", " Have a real business" ]'></span>
+     data-rotate='[" Harry! you found us at last 😬 "," This is the right place.", " Get Real followers", " Up to 50K", " Support for 24/24.", " Let s become friends." , " Contact us Now!" ]'></span>
 </h1>
 <div className="w-100">
-<button className="btn btn-optionscolor"><h2 className="h2-header">Start Now !</h2></button>
+
 </div>
     </div>
     </div>

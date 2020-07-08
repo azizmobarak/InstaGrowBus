@@ -1,44 +1,35 @@
 import React, { useState } from 'react';
 import form from './form.css';
 import send from '../../assets/send.png';
+import {sendmessage} from './message';
 
 export default function Form() {
 
-const [topic,settopic] = useState('Choose a topic')
+const [email,setemail]=useState('');
+const [question,setquestion]=useState('');
+const [message,setmessage]=useState('');
+
+const submit=(e)=>{
+  e.preventDefault();
+ var result=sendmessage(email,question,message);
+ setemail('');
+ setquestion('');
+ setmessage('');
+ alert("Thanks for contacting us , your message sent succefully");
+}
 
   return (
-    <form className="form-group w-75 justify-content-center form-home">
+    <form id="form" className="form-group w-75 justify-content-center form-home" onSubmit={submit}>
     <div className="form-row">
-    <input className="form-control"  placeholder="Email"/>
+    <input value={email} onChange={e=>setemail(e.target.value)} className="form-control" name="email" type="email"  placeholder="Email"/>
     </div>
     <br/>
-    <div className="form-row justify-content-center">
-    <div class="btn-group">
-  <button type="button" class="btn btn-optionscolor dropdown-toggle text-white" data-toggle="dropdown" data-display="static" aria-haspopup="true" aria-expanded="false">
-   {topic}
-  </button>
-  <div class="dropdown-menu dropdown-menu-lg-right">
-    <button onClick={e=>settopic('Followers')} class="dropdown-item" type="button">Followers</button>
-    <button onClick={e=>settopic('Prices')} class="dropdown-item" type="button">Prices</button>
-    <button onClick={e=>settopic('Others')} class="dropdown-item" type="button">Others</button>
-  </div>
-</div>
-    </div>
-    <br/>
-  {
-    topic==="Others"?
-    (
-      <div className="form-row">
-      <input className="form-control"  placeholder="Please mention Topic here"/>
+    <div className="form-row">
+      <input value={question}  onChange={e=>setquestion(e.target.value)} className="form-control" name="question" type='text'  placeholder="your Question"/>
       </div>
-    ):
-    (
-      <p></p>
-    )
-  }
     <br/>
     <div className="form-row">
-    <textarea placeholder="message.." cols="50" rows="4" className="form-control"></textarea>
+    <textarea value={message}  onChange={e=>setmessage(e.target.value)} name="message" placeholder="message.." cols="50" rows="4" className="form-control"></textarea>
     </div>
     <div className="form-row">
  <button className="btn btnsendcolor text-center btnsend">

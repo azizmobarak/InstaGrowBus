@@ -33,19 +33,19 @@ code {
 
 .bg-topbar {
     background-color: rgba(255, 196, 196, 0.637);
+    transition: 2s;
 }
 
 .second-header-column {
     background-image: url('./assets/phone.svg');
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 60%;
-    margin-left: 0%;
+    background-size: 55%;
     align-items: center;
 }
 
 .txtcolorhead {
-    color: rgb(211, 20, 20);
+    color: rgb(246, 246, 246);
     font-weight: bolder;
 }
 
@@ -65,7 +65,7 @@ code {
 
 .second-sectionheader {
     margin-top: 4%;
-    width: 99%;
+    width: 100%;
 }
 
 .h1-header {
@@ -104,6 +104,7 @@ code {
     width: 100%;
     z-index: 999;
     background-color: rgb(226, 170, 66);
+    transition: 2s;
 }
 
 .thirdsectionback {
@@ -120,5 +121,4 @@ code {
     height: 45%;
     width: 100%;
     background-color: rgb(224, 107, 107);
-    ;
 }

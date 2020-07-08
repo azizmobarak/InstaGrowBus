@@ -6,6 +6,7 @@
     align-items: center;
     justify-content: center;
     display: flex;
+    -moz-box-align: center;
 }
 
 .div-container-social {
@@ -13,7 +14,7 @@
     margin-top: 4%;
 }
 
-.socialmedia:hover {
+.socialmove {
     height: 80px;
     cursor: pointer;
     transition: 2s;

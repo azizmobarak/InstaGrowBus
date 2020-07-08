@@ -13,11 +13,46 @@
 }
 
 .listfooter>li {
-    height: 30%;
-    width: 30%;
+    float: left;
+    height: 50px;
+    width: 20%;
     display: flex;
     align-items: center;
     text-align: center;
     justify-content: center;
-    background-color: burlywood;
+}
+
+.listfooter>li>a {
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: medium;
+}
+
+.socialcontainer {
+    width: 90%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.listfootersocial {
+    list-style: none;
+    width: 80%;
+}
+
+.listfootersocial>li {
+    float: left;
+    width: 20%;
+}
+
+.listfootersocial>li>img {
+    width: 5em;
+}
+
+.createdby {
+    margin: 0 2% 0;
+    color: white;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 15px;
 }

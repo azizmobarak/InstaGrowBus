@@ -7,6 +7,8 @@ import whatsapp from '../../assets/whatsapp.svg';
 
 export default function Section3() {
 
+
+
   return (
     <div className="section3">
     <div className="row">
@@ -15,13 +17,13 @@ export default function Section3() {
     <div className="div-container-social">
     <div className="row text-center">
     <div className="col-4">
-    <img id="social1" className="socialmedia" height="60" src={facebook}/>
+    <img id="social" className="socialmedia" height="60" src={facebook}/>
     </div>
     <div className="col-4">
-    <img  id="social2" className="socialmedia" height="60" src={whatsapp}/>
+    <img  id="social" className="socialmedia" height="60" src={whatsapp}/>
     </div>
     <div className="col-4">
-    <img  id="social3" className="socialmedia" height="60" src={email}/>
+    <img  id="social" className="socialmedia" height="60" src={email}/>
     </div>
    </div>
     </div>

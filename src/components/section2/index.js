@@ -6,10 +6,8 @@ import pic55 from "../../assets/55.svg";
 import {Button3,Button2,Button1} from '../paypal/index';
 export default function Section2() {
 
-  
-
   return (
-    <div className="row w-100 section2">
+    <div id="section2" className="row w-100 section2">
     <div className="col-md-4 colcenteritem">
     <img className="picprice" src={pic55}/><br/>
     <Button1/>
