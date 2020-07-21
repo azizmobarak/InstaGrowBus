@@ -1,10 +1,15 @@
 import React,{useEffect} from 'react';
 
+
 var tab = [];
-export const addtobasket = (name, e) => {
-    tab.push(name);
+export const addtobasket = (name,price) => {
+   
+    tab.push({plan:name,price:price});
     document.getElementById('icon').style.color="tomato";
-    return tab.length;
+    return {
+        count : tab.length,
+        tab : tab
+    }
 }
 
 export const cleartable = () => {

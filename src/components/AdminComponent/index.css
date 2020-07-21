@@ -1,0 +1,17 @@
+.admindash {
+    width: 99%;
+    height: 100vh;
+}
+
+.adminmenu {
+    height: 100vh;
+    background-color: tomato;
+    display: flex;
+    align-items: center;
+}
+
+@media only screen and (min-width:700px) {
+    .listmenu {
+        list-style: none;
+    }
+}
