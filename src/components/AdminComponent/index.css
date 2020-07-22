@@ -1,17 +1,111 @@
-.admindash {
-    width: 99%;
-    height: 100vh;
-}
-
-.adminmenu {
-    height: 100vh;
+.headtable {
     background-color: tomato;
-    display: flex;
-    align-items: center;
+    color: white;
 }
 
-@media only screen and (min-width:700px) {
+.feedback {
+    margin-top: 5vw;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+@media only screen and (min-width:800px) {
+    .listusers {
+        list-style: none;
+        margin-top: 1vh;
+        width: 60%;
+    }
+    .listusers>li {
+        height: 10vh;
+        align-items: center;
+        border: 1px white solid;
+        background-color: blanchedalmond;
+    }
+    .edite {
+        margin-top: 5vh;
+    }
+    .leftsection {
+        border-right: 1px solid;
+    }
+    .titlesection {
+        font-size: 2vw;
+        padding: 2vw;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    #numberusers {
+        font-size: 10vw;
+    }
+    #chartcanavas1,
+    #chartcanavas2 {
+        width: 90%;
+        height: 90%;
+    }
+    .divstatics {
+        border: 0.1px solid tomato;
+        width: 100%;
+        height: 200px;
+        border-radius: 1vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .admindesktop {
+        margin: 5vw 1vw 3vw;
+    }
+    .admindash {
+        width: 99%;
+        height: 98vh;
+    }
+    .adminmenu {
+        height: 99vh;
+        background-color: black;
+        display: flex;
+        align-items: center;
+        padding: 1px;
+    }
+    .adminmenu>ul>li {
+        height: 14vh;
+        cursor: pointer;
+    }
     .listmenu {
         list-style: none;
+    }
+    .icon {
+        font-size: 50px;
+        color: white;
+    }
+}
+
+@media only screen and (max-width:801px) {
+    #numberusers {
+        font-size: 30px;
+    }
+    .divstatics {
+        margin-top: 10vw;
+    }
+    .feedback {
+        width: 95%;
+        justify-content: center;
+    }
+    .feedback>table {
+        margin-left: 10vw;
+    }
+    .icon {
+        font-size: 20px;
+        color: white;
+    }
+    .adminmenu {
+        height: 10vh;
+        width: 100%;
+        background-color: black;
+    }
+    .listmenu {
+        margin-left: 10vw;
+        margin-top: 3vh;
+        width: 100%;
+        list-style: none;
+    }
+    .listmenu>li {
+        width: 20%;
+        float: left;
     }
 }
