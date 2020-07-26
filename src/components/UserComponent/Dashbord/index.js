@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import css from '../Dashbord/index.css';
 import Orders from "./orders";
 import Services from './services';
+import {cleartable} from './functions';
 export default function Dashbord() {
 
 const [page,setpage]=useState('orders');
@@ -15,7 +16,7 @@ const [page,setpage]=useState('orders');
   <div className="collapse navbar-collapse" id="navbarNav">
     <ul className="navbar-nav navlist">
       <li className="nav-item active">
-        <button onClick={()=>{setpage('orders')}} className="btn">Orders</button>
+        <button onClick={()=>{setpage('orders');cleartable();}} className="btn">Orders</button>
       </li>
       <li className="nav-item">
       <button onClick={()=>{setpage('services')}} className="btn">Services</button>
